@@ -22,10 +22,35 @@ const createDeck = () => {
         }
     }
 
-    console.log(deck);
+    // console.log(deck);
     deck = _.shuffle(deck);
 
-    console.log(deck);
+    // console.log(deck);
+    return deck;
 }
 
 createDeck();
+
+// Function to obtain card of the deck
+const getCard = () => {
+    if (deck.length === 0) {
+        throw new Error('No deck found.');
+    }
+
+    // console.log(deck);
+    // console.log(card);
+
+    return deck.pop();
+}
+
+// Function to obtain the card value
+const cardValue = (card) => {
+    const value = card.substring(0, card.length - 1);
+
+    return ( isNaN( value ) ) ?
+        ( value === 'A' ) ? 11 : 10
+        : value * 1;
+}
+
+const valueOfCard = cardValue(getCard());
+// console.log({valueOfCard});
