@@ -12,14 +12,13 @@ html, body {
     font-size: 25px;
 }
 
-.carta {
+.cardImg {
     position: relative;
     width: 150px;
     left: 100px;
     margin-left: -75px;
-
 }
 
-#computadora-cartas, #jugador-cartas {
+#computer-cards, #player-cards {
     height: 240px;
 }
