@@ -75,7 +75,15 @@ const computerTurn = (minPoints) => {
         }
     } while ((computerPoints < minPoints) && (minPoints <= 21));
 
-
+    setTimeout(() => {
+        if (computerPoints === playerPoints) {
+            alert('Nadie gana!');
+        } else if (computerPoints > playerPoints && computerPoints <= 21 || playerPoints > 21) {
+            alert('Computadora gana!');
+        } else if (playerPoints > computerPoints && playerPoints <= 21 || computerPoints > 21) {
+            alert('Jugador gana!');
+        }
+    }, 20)
 }
 
 // Listener of button
@@ -109,3 +117,4 @@ btnStop.addEventListener('click', () => {
 
     computerTurn(playerPoints);
 })
+
