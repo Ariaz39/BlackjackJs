@@ -118,3 +118,18 @@ btnStop.addEventListener('click', () => {
     computerTurn(playerPoints);
 })
 
+btnNew.addEventListener('click', () => {
+    deck = [];
+    deck = createDeck();
+
+    playerPoints = 0;
+    computerPoints = 0;
+
+    smallPoints[0].innerText = 0;
+    smallPoints[1].innerText = 0;
+
+    divPlayerCards.innerHTML = '';
+    divComputerCards.innerHTML = '';
+    btnGet.disabled = false;
+    btnStop.disabled = false;
+})
