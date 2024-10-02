@@ -102,3 +102,10 @@ btnGet.addEventListener('click', () => {
         computerTurn(playerPoints);
     }
 });
+
+btnStop.addEventListener('click', () => {
+    btnGet.disabled = true;
+    btnStop.disabled = true;
+
+    computerTurn(playerPoints);
+})
